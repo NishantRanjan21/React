@@ -5,11 +5,13 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/error";
-import Cart from "./components/Cart"
 import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";/**We use Router in order to make Aboutus and contact us page*/
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import { lazy, Suspense } from "react";
+//dynamic Bundling using lazy loading
+const Cart = lazy(() => import("./components/Cart"));
 
 const AppLayout = () => {
   return (
@@ -46,7 +48,7 @@ const appRouter = createBrowserRouter(
         },
         {
           path: "/Cart",
-          element: <Cart/>
+          element: <Suspense><Cart/></Suspense>
         }
       ],
       errorElement: <Error />,

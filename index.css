@@ -367,6 +367,10 @@ a {
 
 .contact {
   height: calc(100vh - 16vh);
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  padding-top: 15px;
 }
 
 .Contact-container {
@@ -643,4 +647,68 @@ a {
     text-align: right;
     font-size: 1.3rem;
     color: #333;
+}
+
+/* contact us */
+.contact-page {
+  min-height: calc(100vh - 16vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  padding: 20px;
+}
+
+.contact-box {
+  width: 400px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  font-family: "Fira Sans", sans-serif;
+}
+
+.contact-box h2 {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1.4px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #333;
+}
+
+.submit-btn {
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #333;
 }
